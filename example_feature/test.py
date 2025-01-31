@@ -1,5 +1,5 @@
 import unittest
-from example_feature import NamedCoords
+from Coordinates import NamedCoords
 import math
 
 class NamedCordTest(unittest.TestCase):
@@ -28,8 +28,7 @@ class NamedCordTest(unittest.TestCase):
     def test_distance_error(self):
         far_point = NamedCoords(2000, 2000, 'bad')
         self.assertRaises(Exception, self.p1.calc_distance, far_point)
+        self.assertIn
 
-
-#run this class by calling `python ./example_features/test.py`
 if __name__ == '__main__':
     unittest.main()

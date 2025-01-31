@@ -40,6 +40,9 @@ class MyTestClass(unittest.TestCase):
     def test_add(self):
         sum = 1 + 1
         self.assertEqual(sum, 2, 'One and One should make Two')
+
+if __name__ == '__main__': #this calls the unit test to perform the operation
+    unittest.main()
 ```
 
 There are a lot of different operations inherited by the `unittest.TestCase` that we can use such as `self.assertIn` which takes a value and an iterable to determine if the value is present in that iterable
@@ -53,6 +56,10 @@ class MyTestClass(unittest.TestCase):
         my_val = 'carl'
         iterable = ['john', 'zaza', 'carl']
         self.assertIn(my_val, iterable, 'Carl should be in the iterable')
+
+
+if __name__ == '__main__': #this calls the unit test to perform the operation
+    unittest.main()
 ```
 
 I would recommend looking at some of the docummentation for `unittest` to determine which assertion functions you need or want to call. Their functions are comprehensive and you should be able to find what you need to perform whatever test you want 
@@ -82,6 +89,8 @@ class MyTestClass(unittest.TestCase):
     def test_str_is_longer_than_5(self):
         self.assertTrue( (len(self.myClass.val_str) >= 5) )
 
+if __name__ == '__main__': #this calls the unit test to perform the operation
+    unittest.main()
 ```
 
 Now running this code would generate errors because we have not implemented the class yet.
@@ -95,3 +104,4 @@ class MyClass():
 
 After running the tests we should see a correct output that lets us know we implemented our desired class correctly.
 
+Call the unit test by doing `python <test_file_path>` 

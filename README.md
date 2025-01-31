@@ -49,7 +49,7 @@ import unittest
 
 class MyTestClass(unittest.TestCase):
     
-    def test_add(self):
+    def test_in(self):
         my_val = 'carl'
         iterable = ['john', 'zaza', 'carl']
         self.assertIn(my_val, iterable, 'Carl should be in the iterable')
